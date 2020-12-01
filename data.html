@@ -299,7 +299,7 @@
                     data = JSON.parse(data);
                     let tr = "";
                     for (i in data) {
-                        tr = tr + `<tr><td>${data[i].transactiondatetime}</td><td>${data[i].transactiontype}</td><td>${data[i].airportsid}</td><td>${data[i].aircraftsid}</td><td>${data[i].quantity}</td></tr>`;
+                        tr = tr + `<tr><td>${data[i].transactiondatetime}</td><td>${data[i].transactiontype}</td><td>${data[i].airport_id}</td><td>${data[i].aircraft_id}</td><td>${data[i].quantity}</td></tr>`;
                     }
                     tableData.innerHTML = tableData.innerHTML + tr;
                 }
@@ -354,9 +354,9 @@
 
 
                     for (i in data) {
-                        tr = tr + `<div>Airport:${data[i].airport_name}</div><tr><td>${data[i].transactiondatetime}</td><td>${data[i].transactiontype}</td><td>${data[i].fuel_capacity}</td><td>${data[i].aircraftsid}</td></tr>`;
+                        tr = tr + `<div>Airport:${data[i].airport_name}</div><tr><td>${data[i].transactiondatetime}</td><td>${data[i].transactiontype}</td><td>${data[i].fuel_capacity}</td><td>${data[i].aircraft_id}</td></tr>`;
                     }
-                    tableData.innerHTML = tableData.innerHTML + rows1;
+                    tableData.innerHTML = tableData.innerHTML + tr;
                 }
             </script>
 </body>
