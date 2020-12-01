@@ -185,27 +185,27 @@ app.get("/api/fuel/transaction", (req, res, next) => {
             return;
         }
 
-        var total_fuel = 0;
-        for (i in rows) {
-            if (rows[i].airport_id == '1') {
-                if (rows[i].transactiontype == 'IN') {
-                    total_fuel += rows[i].fuel_available;
-                    console.log(total_fuel)
-                }
-                else if (rows[i].transactiontype == 'OUT') {
-                    total_fuel = total_fuel - rows[i].fuel_available;
-                    console.log(total_fuel)
-                }
-            }
-        }
+//         var total_fuel = 0;
+//         for (i in rows) {
+//             if (rows[i].airport_id == '1') {
+//                 if (rows[i].transactiontype == 'IN') {
+//                     total_fuel += rows[i].fuel_available;
+//                     console.log(total_fuel)
+//                 }
+//                 else if (rows[i].transactiontype == 'OUT') {
+//                     total_fuel = total_fuel - rows[i].fuel_available;
+//                     console.log(total_fuel)
+//                 }
+//             }
+//         }
 
-        // console.log(total_fuel)
+    
 
 
 
 
         //console.log("Imma here" + JSON.stringify(rows))
-        res.send(JSON.stringify(rows));
+        res.json(JSON.stringify(rows));
         // res.json({
         //     "message": "success",
         //     "data": rows
